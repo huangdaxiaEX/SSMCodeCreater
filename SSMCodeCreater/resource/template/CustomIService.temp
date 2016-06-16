@@ -1,0 +1,13 @@
+package ${package}${classNameL}Service.customInterface;
+
+/**
+ * 自定义Service
+ * 
+ * @author ${author}
+ * 
+ */
+public interface ICustom${className}Service {
+	
+	//自定义Service方法 在对应的impl里面实现方法 
+
+}

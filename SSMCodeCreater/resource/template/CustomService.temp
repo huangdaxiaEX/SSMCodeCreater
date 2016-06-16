@@ -1,0 +1,18 @@
+package ${package}${classNameL}Service;
+
+import ${package}${classNameL}Service.customInterface.ICustom${className}Service;
+import ${package}${classNameL}Service.${className}ServiceImpl;
+import org.springframework.stereotype.Service;
+
+/**
+ * 自定义实现Service
+ * 
+ * @author ${author}
+ * 
+ */
+@Service
+public class Custom${className}ServiceImpl extends ${className}ServiceImpl implements ICustom${className}Service{
+	
+	//实现自定义Service方法
+
+}

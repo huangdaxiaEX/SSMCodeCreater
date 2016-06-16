@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<!-- create by ${author} -->
+
+<mapper namespace="${daoPackage}${classNameL}Dao.${className}Dao">
+	<!-- select -->
+	<select id="getByID" resultType="${entityPackage}${classNameL}.${className}">
+		<![CDATA[   
+			select * from ${classNameLL} 
+		]]>
+		<where>
+			${classNameLL}id = #${dakuohao}ID}
+		</where>
+	</select>
+	
+	<select id="getByCondition" resultType="${entityPackage}${classNameL}.${className}">
+		<![CDATA[   
+			select * from ${classNameLL} 
+		]]>
+		<where>
+			<if test="condition != null">
+		 		${dollor}{condition}
+		 	</if>
+		</where>
+	</select>
+	
+	<select id="getCountByCondition" resultType="int">
+		select count(distinct ${classNameLL}id) from ${classNameLL}
+		<where>
+        	<if test="condition != null">
+        		${dollor}{condition}
+        	</if>	
+        </where>
+	</select>
+	
+	<select id="findByID" resultType="map">
+		select 
+		<foreach collection="properties" item="item" index="index" separator=",">
+          	${dollor}{item}
+        </foreach>
+        from ${classNameLL} 
+        <where>
+        	${classNameLL}id = ${jinhao}{ID}
+        </where>
+	</select>	
+	
+	<select id="findByCondition" resultType="map">
+		select 
+		<foreach collection="properties" item="item" index="index" separator=",">
+          	${dollor}{item}
+        </foreach>
+        from ${classNameLL} 
+        <where>
+        	<if test="condition != null">
+        		${dollor}{condition}
+        	</if>
+        </where>
+	</select>		
+	
+	<!-- update -->
+	<update id="updateByID" >
+		<![CDATA[  
+			update ${classNameLL} set 
+			<#list fieldList as pro>
+				${pro.fieldNameLL} = #${dakuohao}entity.${pro.fieldNameL}}<#if pro_has_next>,</#if>
+			</#list>
+      	]]>
+      	<where>
+      		${classNameLL}id = ${jinhao}{ID}
+      	</where>  		
+	</update>
+	
+	<update id="updateByCondition">
+		<![CDATA[  
+			update ${classNameLL} set 
+			<#list fieldList as pro>
+				${pro.fieldNameLL} = #${dakuohao}entity.${pro.fieldNameL}}<#if pro_has_next>,</#if>
+			</#list>
+      	]]>
+      	<where>
+      		<if test="condition != null">
+      			${dollor}{condition}
+      		</if>
+      	</where>  		
+	</update>
+	
+	<update id="updatePropByID">
+		<![CDATA[  
+			update ${classNameLL} set
+		]]>
+		<foreach collection="prop" item="item" index="index" separator=",">
+          	${dollor}{item.key} = ${jinhao}{item.value}
+        </foreach>
+        <where>
+        	${classNameLL}id = ${jinhao}{ID}
+        </where>
+	</update>
+	
+	<update id="updatePropByCondition">
+		<![CDATA[  
+			update ${classNameLL} set
+		]]>
+		<foreach collection="prop" item="item" index="index" separator=",">
+          	${dollor}{item.key} = ${jinhao}{item.value}
+        </foreach>
+        <where>
+        	<if test="condition != null">
+        		${dollor}{condition}
+        	</if>
+        </where>
+	</update>	
+	
+	<!-- delete -->
+	<delete id="deleteByID" parameterType="string">
+		<![CDATA[   
+			delete from ${classNameLL}   
+		]]>
+		<where>
+			${classNameLL}id = ${jinhao}{ID}
+		</where>
+	</delete>	
+
+	<delete id="deleteByCondition" parameterType="string">
+		<![CDATA[   
+			delete from ${classNameLL}  
+		]]>
+		<where>
+			<if test="condition != null">
+				${dollor}{condition}
+			</if>	
+		</where>	
+	</delete>	
+	
+	<delete id="delete${className}s" parameterType="string">
+		<![CDATA[   
+			delete from activity    
+		]]>
+		<where>
+			 ${classNameLL}id in
+			 <foreach collection="IDs" item="item" index="index" separator="," open="(" close=")">
+          		${jinhao}{item}
+        	 </foreach>
+		</where>	
+	</delete>
+	
+	<!-- save -->
+	<insert id="save" parameterType="${entityPackage}${classNameL}.${className}">  
+     	<![CDATA[   
+        	 insert into ${classNameLL} (<#list fieldList as pro>${pro.fieldNameLL}<#if pro_has_next>, </#if></#list>)
+        	 values (<#list fieldList as pro>#${dakuohao}${pro.fieldNameL}}<#if pro_has_next>, </#if></#list>)	
+    	 ]]>   
+    </insert>
+    
+    <insert id="save${className}s"> 
+	 	 <![CDATA[  
+	    	insert into ${classNameLL} (<#list fieldList as pro>${pro.fieldNameLL}<#if pro_has_next>, </#if></#list>) 
+	    	VALUES 
+	    ]]>  
+	    <foreach collection="entities" item="item" index="index" separator=",">   
+	         (<#list fieldList as pro>#${dakuohao}item.${pro.fieldNameL}}<#if pro_has_next>, </#if></#list>)
+	    </foreach> 
+	</insert> 
+	
+</mapper>

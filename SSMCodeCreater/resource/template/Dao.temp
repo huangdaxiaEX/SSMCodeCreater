@@ -1,0 +1,36 @@
+package ${package}${classNameL}Dao;
+
+import java.util.*;
+import java.util.Map.Entry;
+import org.apache.ibatis.annotations.Param;
+import ${entityPackage}${classNameL}.${className};
+
+/**
+ * Dao
+ * 
+ * @author ${author}
+ * 
+ */
+public interface ${className}Dao {
+	//select
+	public ${className} getByID(@Param("ID")String ID);
+	public List<${className}> getByCondition(@Param("condition")String condition);
+	public int getCountByCondition(@Param("condition")String condition);
+	public Map<String,Object> findByID(@Param("properties")String[] properties, @Param("ID")String id);
+	public List<Map<String,Object>> findByCondition(@Param("properties")String[] properties, @Param("condition")String condition);
+	
+	//update
+	public int updateByID(@Param("entity")${className} ${classNameL}, @Param("ID")String ID);
+	public int updateByCondition(@Param("entity")${className} ${classNameL}, @Param("condition")String condition);
+	public int updatePropByID(@Param("prop")Set<Entry<String, Object>> prop, @Param("ID")String ID);
+	public int updatePropByCondition(@Param("prop")Set<Entry<String, Object>> prop, @Param("condition")String condition);
+	
+	//delete
+	public int deleteByID(@Param("ID")String ID);
+	public int deleteByCondition(@Param("condition")String condition);
+	public int delete${className}ByIDs(@Param("IDs")String[] IDs);
+	
+	//save
+	public int save(${className} ${classNameL});
+	public int save${className}s(@Param("entities")${className}[] ${classNameL}s);
+}

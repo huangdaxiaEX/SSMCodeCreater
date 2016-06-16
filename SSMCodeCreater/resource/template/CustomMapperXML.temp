@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<!-- create by ${author} -->
+
+<mapper namespace="${daoPackage}${classNameL}Dao.Custom${className}Dao">
+	
+	<!-- 在这里填写自定义接口方法的sql -->
+	
+</mapper>

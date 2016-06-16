@@ -1,0 +1,113 @@
+package ${package}${classNameL}Service;
+
+import org.springframework.stereotype.Service;
+import java.util.*;
+import java.util.Map.Entry;
+import javax.annotation.Resource;
+
+import ${package}${classNameL}Service.customInterface.I${className}Service;
+import ${daoPackage}${classNameL}Dao.${className}Dao;
+import ${entityPackage}${classNameL}.${className};
+import ${package}baseService.BaseService;
+
+/**
+ * Service
+ * 
+ * @author ${author}
+ * 
+ */
+@Service
+public class ${className}ServiceImpl extends BaseService implements I${className}Service{
+	
+	@Resource(name="${classNameL}Dao")
+	${className}Dao ${classNameL}Dao ;
+
+	//select
+	@Override
+	public ${className} getByID(String ID){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.getByID(ID);
+	}
+	
+	@Override
+	public List<${className}> getByCondition(String condition){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.getByCondition(condition);
+	}
+	
+	@Override
+	public int getCountByCondition(String condition){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.getCountByCondition(condition);
+	}
+	
+	@Override
+	public Map<String,Object> findByID(String[] properties, String id){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.findByID(properties, id);
+	}
+	
+	@Override
+	public List<Map<String,Object>> findByCondition(String[] properties, String condition){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.findByCondition(properties, condition);
+	}
+	
+	//update
+	@Override
+	public int updateByID(${className} ${classNameL}, String ID){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.updateByID(${classNameL}, ID);
+	}
+	
+	@Override
+	public int updateByCondition(${className} ${classNameL}, String condition){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.updateByCondition(${classNameL}, condition);
+	}
+	
+	@Override
+	public int updatePropByID(Set<Entry<String, Object>> prop, String ID){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.updatePropByID(prop, ID);
+	}
+	
+	@Override
+	public int updatePropByCondition(Set<Entry<String, Object>> prop, String condition){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.updatePropByCondition(prop, condition);
+	}
+	
+	//delete
+	@Override
+	public int deleteByID(String ID){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.deleteByID(ID);
+	}
+	
+	@Override
+	public int deleteByCondition(String condition){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.deleteByCondition(condition);
+	}
+	
+	@Override
+	public int delete${className}ByIDs(String[] IDs){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.delete${className}ByIDs(IDs);
+	}
+	
+	//save
+	@Override
+	public int save(${className} ${classNameL}){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.save(${classNameL});
+	}
+	
+	@Override
+	public int save${className}s(${className}[] ${classNameL}s){
+		// TODO Auto-generated method stub
+		return ${classNameL}Dao.save${className}s(${classNameL}s);
+	}
+	
+}

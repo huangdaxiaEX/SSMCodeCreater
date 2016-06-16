@@ -1,0 +1,13 @@
+package ${package}${classNameL}Dao;
+
+/**
+ * 自定义Dao
+ * 
+ * @author ${author}
+ * 
+ */
+public interface Custom${className}Dao {
+	
+	//自定义dao方法 在 Mapper里面实现方法 
+
+}
