@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 import ${entityPackage}${classNameL}.${className};
 
 /**
- * Service方法接口
+ * Service鏂规硶鎺ュ彛
  * 
  * @author ${author}
  * 

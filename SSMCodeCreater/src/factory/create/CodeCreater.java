@@ -23,7 +23,7 @@ import factory.pathSetting.PathSetting;
 import freemarker.template.TemplateException;
 
 /**
- * È«¾Ö¿ØÖÆÀà Ö¸ÅÉÈÎÎñ
+ * å…¨å±€æ§åˆ¶ç±» æŒ‡æ´¾ä»»åŠ¡
  * 
  * @author huangkai
  * 
@@ -59,15 +59,15 @@ public class CodeCreater {
 	}
 	
 	public static void createDatabase(Entity entity) throws IOException {
-		System.out.println("Ö´ĞĞÊı¾İ¿â²Ù×÷");
+		System.out.println("æ‰§è¡Œæ•°æ®åº“æ“ä½œ");
 		CommonDAO cd = new CommonDAO();
-		//ĞÂÔöÊı¾İ¿â
+		//æ–°å¢æ•°æ®åº“
 		if (entity.getEntitySteate() == 0) {
 			String sql = SQLCreate.tableCreateSQL(entity);
 			//System.out.println(sql);
 			cd.executeSql(sql);
 			//resultList.add(cd.executeSql(sql));
-		} else {//ĞŞ¸ÄÊı¾İ¿â×Ö¶Î
+		} else {//ä¿®æ”¹æ•°æ®åº“å­—æ®µ
 			List<String> sqlList = SQLCreate.tableAlterSQL(entity);
 			for (int i = 0; i < sqlList.size(); i++) {
 				System.out.println(sqlList.get(i));
@@ -77,7 +77,7 @@ public class CodeCreater {
 	}
 	
 	public static void createTask(Entity entity){
-		System.out.println("Îª" + entity.getEntityName() + "¼ÓÔØÄ£°å\n");
+		System.out.println("ä¸º" + entity.getEntityName() + "åŠ è½½æ¨¡æ¿\n");
 		new EntityCreater().executeCreateTask(entity);
 		new DaoCreater().executeCreateTask(entity);	
 		new MapperXMLCreater().executeCreateTask(entity);
@@ -89,6 +89,6 @@ public class CodeCreater {
 		new CustomIServiceCreater().executeCreateTask(entity);
 		new CustomMapperXMLCreater().executeCreateTask(entity);
 		
-		System.out.println(entity.getEntityName() + "´´½¨javaÀàÍê³É\n");
+		System.out.println(entity.getEntityName() + "åˆ›å»ºjavaç±»å®Œæˆ\n");
 	}
 }

@@ -6,7 +6,7 @@ import factory.database.dao.SQLTemplate;
 import factory.entity.Entity;
 
 /**
- * ´´½¨Êı¾İ¿âÓï¾ä
+ * åˆ›å»ºæ•°æ®åº“è¯­å¥
  * 
  * @author huangkai
  * 

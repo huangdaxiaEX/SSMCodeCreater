@@ -14,7 +14,7 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
 /**
- * IService ½Ó¿ÚÉú³É
+ * IService æ¥å£ç”Ÿæˆ
  * 
  * @author huangkai
  * 
@@ -41,16 +41,16 @@ public class IServiceCreater extends BaseCreater{
 		File file = new File(writePath + getPackagePathWithPathKey() + StringCaseUtil.lowcaseFirstChar(className) + "/customInterface");
 		if (!file.exists()) {
 			file.mkdirs();
-			System.out.println("´´½¨ÎÄ¼ş¼Ğ");
+			System.out.println("åˆ›å»ºæ–‡ä»¶å¤¹");
 		}
 	}
 
 /*	protected void fillData(String className, Entity entity){
 		Map<String, Object> data = new HashMap<String, Object>();
-		// Ê××ÖÄ¸Ğ¡Ğ´µÄÀàÃû
+		// é¦–å­—æ¯å°å†™çš„ç±»å
 		data.put("classNameL", StringCaseUtil.lowcaseFirstChar(entity
 				.getEntityName()));
-		// Ê××ÖÄ¸´óĞ´µÄÀàÃû
+		// é¦–å­—æ¯å¤§å†™çš„ç±»å
 		data.put("className", StringCaseUtil.upcaseFirstChar(entity
 				.getEntityName()));
 		loadTemplateAndWriteFile(className, ".java", data);

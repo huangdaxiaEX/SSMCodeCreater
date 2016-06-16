@@ -7,9 +7,9 @@ import freemarker.template.TemplateException;
 
 public class Main {
 	public static void main(String[] args) throws IOException, TemplateException, SecurityException, NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
-		// xml文件位置
+		// xml鏂囦欢浣嶇疆
 		String sourcePath = "C:/Users/Administrator/Desktop/dataExcel.xls";
-		// 输出位置
+		// 杈撳嚭浣嶇疆
 		String writePath = "C:/Users/Administrator/Desktop/";
 		
 		CodeCreater.StartCreate(sourcePath, writePath);

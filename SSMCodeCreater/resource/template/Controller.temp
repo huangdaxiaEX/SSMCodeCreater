@@ -22,7 +22,7 @@ public class ${className}Controller {
 	I${className}Service ${classNameL}Service;
 
 	/**
-	 * ·½·¨Ä£°å ÇëĞŞ¸ÄÍê³Éºó É¾³ı´Ë·½·¨
+	 * æ–¹æ³•æ¨¡æ¿ è¯·ä¿®æ”¹å®Œæˆå åˆ é™¤æ­¤æ–¹æ³•
 	 */
 //  @RequestMapping(value = "/methodTemplate")
 //	@ResponseBody

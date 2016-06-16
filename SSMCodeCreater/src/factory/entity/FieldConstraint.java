@@ -1,7 +1,7 @@
 package factory.entity;
 
 /**
- * Êı¾İ¿â×Ö¶ÎÔ¼Êø
+ * æ•°æ®åº“å­—æ®µçº¦æŸ
  * 
  * @author huangkai
  * 
@@ -11,7 +11,7 @@ public class FieldConstraint {
 	public FieldConstraint() {
 		// TODO Auto-generated constructor stub
 	}
-	//Ô¼Êø
+	//Ô¼ï¿½ï¿½
 	private static final String PRIMARYKEY 	= "primary key";
 	private static final String UNIQUE 		= "unique";
 	private static final String CHECK  		= "check";

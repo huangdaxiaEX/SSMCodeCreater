@@ -1,7 +1,7 @@
 package factory.pathSetting;
 
 /**
- * Â·¾¶»ùÕ¾
+ * è·¯å¾„åŸºç«™
  * 
  * @author huangkai
  * 

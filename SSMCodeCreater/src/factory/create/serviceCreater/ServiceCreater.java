@@ -13,7 +13,7 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
 /**
- * Service ÊµÏÖÀàÉú³É
+ * Service å®ç°ç±»ç”Ÿæˆ
  * 
  * @author huangkai
  * 

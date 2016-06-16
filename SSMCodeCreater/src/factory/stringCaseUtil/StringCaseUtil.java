@@ -1,7 +1,7 @@
 package factory.stringCaseUtil;
 
 /**
- * String ×ª»¯¹¤¾ßÀà
+ * String è½¬åŒ–å·¥å…·ç±»
  * 
  * @author huangkai
  * 
@@ -10,7 +10,7 @@ public class StringCaseUtil {
 	
 	public static String upcaseFirstChar(String s){
 		if (s == null || s.equals("")) {
-			System.out.println("×ª»»×Ö·û²ÎÊı´íÎó");
+			System.out.println("è½¬æ¢å­—ç¬¦å‚æ•°é”™è¯¯");
 			return "";
 		}
 		
@@ -21,7 +21,7 @@ public class StringCaseUtil {
 	
 	public static String lowcaseFirstChar(String s){
 		if (s == null || s.equals("")) {
-			System.out.println("×ª»»×Ö·û²ÎÊı´íÎó");
+			System.out.println("è½¬æ¢å­—ç¬¦å‚æ•°é”™è¯¯");
 			return "";
 		}
 		
@@ -32,7 +32,7 @@ public class StringCaseUtil {
 	
 	public static String upcaseAll(String s){
 		if (s == null || s.equals("")) {
-			System.out.println("×ª»»×Ö·û²ÎÊı´íÎó ");
+			System.out.println("è½¬æ¢å­—ç¬¦å‚æ•°é”™è¯¯ ");
 			return "";
 		}
 		StringBuffer sb = new StringBuffer();
@@ -49,7 +49,7 @@ public class StringCaseUtil {
 	
 	public static String lowcaseAll(String s){
 		if (s == null || s.equals("")) {
-			System.out.println("×ª»»×Ö·û²ÎÊı´íÎó ");
+			System.out.println("è½¬æ¢å­—ç¬¦å‚æ•°é”™è¯¯ ");
 			return "";
 		}
 		StringBuffer sb = new StringBuffer();

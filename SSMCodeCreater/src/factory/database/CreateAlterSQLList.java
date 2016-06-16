@@ -8,7 +8,7 @@ import factory.entity.Entity;
 import factory.entity.Field;
 
 /**
- * ´´½¨alter Óï¾ä
+ * åˆ›å»ºalter è¯­å¥
  * 
  * @author huangkai
  * 
@@ -24,7 +24,7 @@ public class CreateAlterSQLList {
 		List<Field> fields = entity.getFields();
 		int fieldCount = fields.size();
 		String tableName = entity.getEntityName();
-		// ·Ö±ğ¶ÔÓ¦5¸ö×´Ì¬ 0£º²»´¦Àí(Ä¬ÈÏ) 1£ºĞÂÔö 2£ºĞŞ¸Ä 3£ºÉ¾³ı×Ö¶ÎÔ¼Êø 4£ºÉ¾³ı¸Ã×Ö¶Î
+		// åˆ†åˆ«å¯¹åº”5ä¸ªçŠ¶æ€ 0ï¼šä¸å¤„ç†(é»˜è®¤) 1ï¼šæ–°å¢ 2ï¼šä¿®æ”¹ 3ï¼šåˆ é™¤å­—æ®µçº¦æŸ 4ï¼šåˆ é™¤è¯¥å­—æ®µ
 		for (int i = 0; i < fieldCount; i++) {
 			Field field = fields.get(i);
 			String tag = field.getFieldTag();

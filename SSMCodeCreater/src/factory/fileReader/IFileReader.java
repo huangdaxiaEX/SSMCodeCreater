@@ -6,7 +6,7 @@ import java.util.List;
 import factory.entity.Entity;
 
 /**
- * ²Ù×÷ÎÄ¼şµÄ½Ó¿Ú
+ * æ“ä½œæ–‡ä»¶çš„æ¥å£
  * 
  * @author huangkai
  * 

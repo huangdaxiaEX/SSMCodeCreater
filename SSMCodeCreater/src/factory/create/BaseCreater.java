@@ -16,7 +16,7 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
 /**
- * ³éÏóÀà ·â×°ÁË»ù±¾µÄÄ£°å¶ÁĞ´
+ * æŠ½è±¡ç±» å°è£…äº†åŸºæœ¬çš„æ¨¡æ¿è¯»å†™
  * 
  * @author huangkai
  * 
@@ -42,7 +42,7 @@ public abstract class BaseCreater {
 				+ StringCaseUtil.lowcaseFirstChar(className));
 		if (!file.exists()) {
 			file.mkdirs();
-			System.out.println("´´½¨ÎÄ¼ş¼Ğ");
+			System.out.println("åˆ›å»ºæ–‡ä»¶å¤¹");
 		}
 	}
 	
@@ -70,7 +70,7 @@ public abstract class BaseCreater {
 		if (map.containsKey(key))
 			return map.get(key);
 		else {
-			System.err.println("¶ÁÈ¡" + key + "³ö´í");
+			System.err.println("è¯»å–" + key + "å‡ºé”™");
 			return "";
 		}
 	}
@@ -80,16 +80,16 @@ public abstract class BaseCreater {
 	protected void fillData(String className, Entity entity){
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("author", entity.getAuthor());
-		// Ê××ÖÄ¸Ğ¡Ğ´µÄÀàÃû
+		// é¦–å­—æ¯å°å†™çš„ç±»å
 		data.put("classNameL", StringCaseUtil.lowcaseFirstChar(entity.getEntityName()));
-				// È«²¿Ğ¡Ğ´µÄÀàÃû
+				// å…¨éƒ¨å°å†™çš„ç±»å
 		data.put("classNameLL", StringCaseUtil.lowcaseAll(entity
 								.getEntityName()));
 		data.put("package", getPackagePathWithPathKey().replaceAll("/", "."));
 		data.put("dakuohao", "{");
 		data.put("dollor", "$");
 		data.put("jinhao", "#");
-		// Ê××ÖÄ¸´óĞ´µÄÀàÃû
+		// é¦–å­—æ¯å¤§å†™çš„ç±»å
 		data.put("className", StringCaseUtil.upcaseFirstChar(entity.getEntityName()));
 		data.put("daoPackage", getPackagePathWithPathKey("dao").replaceAll("/", "."));
 		data.put("entityPackage", getPackagePathWithPathKey("entity").replaceAll("/", "."));

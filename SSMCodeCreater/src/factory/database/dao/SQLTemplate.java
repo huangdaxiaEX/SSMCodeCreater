@@ -9,7 +9,7 @@ import factory.entity.FieldConstraint;
 import factory.stringCaseUtil.StringCaseUtil;
 
 /**
- * sqlÓï¾äÄ£°å
+ * sqlè¯­å¥æ¨¡æ¿
  * 
  * @author huangkai
  * 
@@ -21,10 +21,10 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Ìí¼Ó×Ö¶Î  ×îºó½á¹ûÎª ALTER TABLE table_name ADD column_name column_type
+	 * æ·»åŠ å­—æ®µ  æœ€åç»“æœä¸º ALTER TABLE table_name ADD column_name column_type
 	 * 
-	 * @param tableName ±íÃû
-	 * @param fieldList ĞÂÔöµÄÁĞÊı×é
+	 * @param tableName è¡¨å
+	 * @param fieldList æ–°å¢çš„åˆ—æ•°ç»„
 	 * @return
 	 */
 	public static String addColumnSQL(String tableName, List<Field> fieldList){
@@ -41,9 +41,9 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Ìí¼Ó×Ö¶Î  ×îºó½á¹ûÎª ALTER TABLE table_name ADD column_name column_type
+	 * æ·»åŠ å­—æ®µ  æœ€åç»“æœä¸º ALTER TABLE table_name ADD column_name column_type
 	 * 
-	 * @param tableName ±íÃû
+	 * @param tableName è¡¨å
 	 * @param field 
 	 * @return
 	 */
@@ -55,7 +55,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ı±í×Ö¶Î
+	 * åˆ é™¤è¡¨å­—æ®µ
 	 * 
 	 * @param tableName
 	 * @param field
@@ -67,12 +67,12 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Ìí¼ÓÍâ¼ü
-	 * ÀıÈçALTER TABLE table_Name ADD CONSTRAINT fk_fieldName FOREIGN KEY (fieldName) REFERENCES foreignTableName(foreign_field)
+	 * æ·»åŠ å¤–é”®
+	 * ä¾‹å¦‚ALTER TABLE table_Name ADD CONSTRAINT fk_fieldName FOREIGN KEY (fieldName) REFERENCES foreignTableName(foreign_field)
 	 * 
-	 * @param tableName ±íÃû
-	 * @param field ×Ö¶Î
-	 * @param forignInfo Íâ¼üĞÅÏ¢
+	 * @param tableName è¡¨å
+	 * @param field å­—æ®µ
+	 * @param forignInfo å¤–é”®ä¿¡æ¯
 	 * @return
 	 */
 	public static String addColumnForignKeySQL(String tableName, Field field, String forignInfo){
@@ -82,7 +82,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ıÍâ¼ü
+	 * åˆ é™¤å¤–é”®
 	 * 
 	 * @param tableName
 	 * @param field
@@ -94,7 +94,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Îª±íÌí¼Ó check 
+	 * ä¸ºè¡¨æ·»åŠ  check 
 	 * 
 	 * @param tableName
 	 * @param field
@@ -107,7 +107,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ıcheck
+	 * åˆ é™¤check
 	 * 
 	 * @param tableName
 	 * @param field
@@ -119,7 +119,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Îª±íÌí¼ÓÖ÷¼ü
+	 * ä¸ºè¡¨æ·»åŠ ä¸»é”®
 	 * 
 	 * @param tableName
 	 * @param field
@@ -131,7 +131,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ıÖ÷¼ü
+	 * åˆ é™¤ä¸»é”®
 	 * 
 	 * @param tableName
 	 * @param field
@@ -143,7 +143,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Ìí¼Ó default
+	 * æ·»åŠ  default
 	 * 
 	 * @param tableName
 	 * @param field
@@ -156,7 +156,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ıdefault
+	 * åˆ é™¤default
 	 * 
 	 * @param tableName
 	 * @param field
@@ -168,7 +168,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Ìí¼Óunique
+	 * æ·»åŠ unique
 	 * 
 	 * @param tableName
 	 * @param field
@@ -180,7 +180,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ıunique
+	 * åˆ é™¤unique
 	 * 
 	 * @param tableName
 	 * @param field
@@ -192,7 +192,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Ìí¼Ónot null
+	 * æ·»åŠ not null
 	 * 
 	 * @param tableName
 	 * @param field
@@ -204,7 +204,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * É¾³ınot null
+	 * åˆ é™¤not null
 	 * 
 	 * @param tableName
 	 * @param field
@@ -216,7 +216,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * ĞŞ¸Ä±í×Ö¶ÎÀàĞÍ
+	 * ä¿®æ”¹è¡¨å­—æ®µç±»å‹
 	 * 
 	 * @param tableName
 	 * @param field
@@ -228,7 +228,7 @@ public class SQLTemplate {
 	}
 
 	/**
-	 * ´´½¨±í
+	 * åˆ›å»ºè¡¨
 	 * 
 	 * @param entity 
 	 * @return
@@ -242,7 +242,7 @@ public class SQLTemplate {
 		List<Field> fields = entity.getFields();
 		int fieldCount = fields.size();
 		StringBuilder sb = new StringBuilder();
-		//±éÀú×Ö¶Î
+		//éå†å­—æ®µ
 		for (int i = 0; i < fieldCount;i++) {
 			if (sb.length() > 0) {
 				sb.append(",");
@@ -251,16 +251,16 @@ public class SQLTemplate {
 			String fieldName = toLow(field.getFieldName());
 			String fieldType = toLow(field.getFieldType());
 			String fieldTypeCount = checkFieldTypeCount(field.getFieldTypeCount());
-			//Ìî³ä»ù±¾ ÓĞÌØÊâÔ¼ÊøÔÙÌí¼Ó
+			//å¡«å……åŸºæœ¬ æœ‰ç‰¹æ®Šçº¦æŸå†æ·»åŠ 
 			sb.append(fieldName + " " + fieldType + fieldTypeCount+ " ");
-			//´¦ÀíÔ¼Êø Ö÷ÒªÊÇ not null ºÍ default
+			//å¤„ç†çº¦æŸ ä¸»è¦æ˜¯ not null å’Œ default
 			if (field.isNotNull()) {
 				sb.append(checkFieldConstraint("n") + " ");
 			}
 			if (field.isDefault()) {
 				sb.append(checkFieldConstraint("d") + " " + field.getDefaultCondition() + " ");
 			}
-			//´¦Àísql Î²²¿µÄcheck primary foreign unique
+			//å¤„ç†sql å°¾éƒ¨çš„check primary foreign unique
 			if (field.isCheck()) {
 				checkFieldList.add(field);
 			}
@@ -334,7 +334,7 @@ public class SQLTemplate {
 	
 	//helper method
 	/**
-	 * È«²¿×ªĞ¡Ğ´
+	 * å…¨éƒ¨è½¬å°å†™
 	 * 
 	 * @param s
 	 * @return
@@ -344,7 +344,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * Îª³¤¶È¼ÓÀ¨ºÅ
+	 * ä¸ºé•¿åº¦åŠ æ‹¬å·
 	 * 
 	 * @param s
 	 * @return
@@ -357,7 +357,7 @@ public class SQLTemplate {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÔ¼ÊøÀàĞÍ
+	 * åˆ¤æ–­çº¦æŸç±»å‹
 	 * 
 	 * @param s
 	 * @return

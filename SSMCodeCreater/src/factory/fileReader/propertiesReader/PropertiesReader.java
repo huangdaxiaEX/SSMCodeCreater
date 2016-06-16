@@ -10,7 +10,7 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * 读取properties文件
+ * 璇诲彇properties鏂囦欢
  * 
  * @author huangkai
  * 
@@ -25,7 +25,7 @@ public class PropertiesReader {
 
 	public PropertiesReader(String filePath) {
 		// TODO Auto-generated constructor stub
-		System.out.println("读取配置信息");
+		System.out.println("璇诲彇閰嶇疆淇℃伅");
 		try {
 			InputStream inStream = new FileInputStream(filePath);
 			if (inStream != null) {
@@ -38,12 +38,12 @@ public class PropertiesReader {
 						propMap.put(object.toString(), propValue);
 					}
 				} catch (IOException e) {
-					System.out.println("读取配置出错");
+					System.out.println("璇诲彇閰嶇疆鍑洪敊");
 					e.printStackTrace();
 				}
 			}
 		} catch (FileNotFoundException e1) {
-			System.err.println("文件路径出错");
+			System.err.println("鏂囦欢璺緞鍑洪敊");
 			e1.printStackTrace();
 		}
 	}
@@ -57,7 +57,7 @@ public class PropertiesReader {
 				propMap.put(key, o.toString());
 				return o.toString();
 			} else {
-				System.err.println("读取" + key + "出错");
+				System.err.println("璇诲彇" + key + "鍑洪敊");
 				return null;
 			}
 		}

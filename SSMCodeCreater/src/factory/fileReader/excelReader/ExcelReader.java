@@ -14,7 +14,7 @@ import factory.parse.IParse;
 import factory.parse.parseExcel.ParseExcel;
 
 /**
- * ²Ù×÷Excel±í¸ñµÄ¹¦ÄÜÀà
+ * æ“ä½œExcelè¡¨æ ¼çš„åŠŸèƒ½ç±»
  * 
  * @author huangkai
  * 
@@ -28,7 +28,7 @@ public class ExcelReader implements IFileReader{
 	public List<Entity> readFile(String path) throws IOException {
 		// TODO Auto-generated method stub
 		if (path == null || path.length() == 0) {
-			System.out.println("ÇëÊäÈëÎÄ¼şÂ·¾¶");
+			System.out.println("è¯·è¾“å…¥æ–‡ä»¶è·¯å¾„");
 			return null;
 		}
 		String[] filePathArr = path.split("\\.");

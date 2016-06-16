@@ -3,7 +3,7 @@ package factory.entity;
 import java.util.List;
 
 /**
- * ΚµΜεΐΰ
+ * ε®δ½“η±»
  * 
  * @author huangkai
  * 

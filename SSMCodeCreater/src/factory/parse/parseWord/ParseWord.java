@@ -14,7 +14,7 @@ import factory.entity.Field;
 import factory.parse.IParse;
 
 /**
- * ½âÎöword
+ * è§£æword
  * 
  * @author huangkai
  * 
@@ -34,27 +34,27 @@ public class ParseWord implements IParse {
 	public List<Entity> startParse() {
 		// TODO Auto-generated method stub
 		if (it == null) {
-			System.out.println("½âÎöÊ§°Ü");
+			System.out.println("è§£æå¤±è´¥");
 			return null;
 		}
 		return parse();
 	}
 
 	/**
-	 * ·µ»ØÎÄµµÖĞËùÓĞµÄ±í List
+	 * è¿”å›æ–‡æ¡£ä¸­æ‰€æœ‰çš„è¡¨ List
 	 * 
 	 * @param it
 	 * @return
 	 */
 	public List<Entity> parse() {
-		System.out.println("¿ªÊ¼½âÎöÊµÌå\n");
+		System.out.println("å¼€å§‹è§£æå®ä½“\n");
 		List<Entity> list = new ArrayList<Entity>();
-		// ±éÀúÎÄµµÖĞµÄ±í¸ñ
+		// éå†æ–‡æ¡£ä¸­çš„è¡¨æ ¼
 		while (it.hasNext()) {
 			Entity entity = new Entity();
 			Table table = (Table) it.next();
 			List<Field> fields = new ArrayList<Field>();
-			// ±éÀúĞĞ
+			// éå†è¡Œ
 			for (int row = 0; row < table.numRows(); row++) {
 				TableRow tableRow = table.getRow(row);
 				switch (row) {
@@ -82,7 +82,7 @@ public class ParseWord implements IParse {
 			if (!isError && !isExit) {
 				entity.setFields(fields);
 				list.add(entity);
-				System.out.println("½âÎö" + entity.getEntityName() + "Íê³É\n");
+				System.out.println("è§£æ" + entity.getEntityName() + "å®Œæˆ\n");
 			}
 			isError = false;
 			isExit = false;
@@ -95,10 +95,10 @@ public class ParseWord implements IParse {
 		String s = getInformation(tableRow);
 		if (!checkString(s)) {
 			isError = true;
-			System.out.println("ÊµÌåÃû³Æ´íÎó,Çë¼ì²é");
+			System.out.println("å®ä½“åç§°é”™è¯¯,è¯·æ£€æŸ¥");
 			return;
 		}
-		System.out.println("¿ªÊ¼½âÎö  " + s);
+		System.out.println("å¼€å§‹è§£æ  " + s);
 		entity.setEntityName(s);
 	}
 
@@ -121,7 +121,7 @@ public class ParseWord implements IParse {
 
 	public void parseTableField(TableRow tableRow, List<Field> fields) {
 		Field field = new Field();
-		// ±éÀúÁĞ
+		// éå†åˆ—
 		for (int column = 0; column < tableRow.numCells(); column++) {
 			TableCell td = tableRow.getCell(column);
 			Paragraph para = td.getParagraph(0);
@@ -168,7 +168,7 @@ public class ParseWord implements IParse {
 	}
 
 	public void startWrite(TableIterator it, List<Integer> resultList) {
-		// ±éÀúÎÄµµÖĞµÄ±í¸ñ
+		// éå†æ–‡æ¡£ä¸­çš„è¡¨æ ¼
 		int count = 0;
 		while (it.hasNext()) {
 			Table table = (Table) it.next();

@@ -13,7 +13,7 @@ import factory.pathSetting.PathSetting;
 import factory.stringCaseUtil.StringCaseUtil;
 
 /**
- * EntityÀà Éú³É
+ * Entityç±» ç”Ÿæˆ
  * 
  * @author huangkai
  * 
@@ -42,13 +42,13 @@ public class EntityCreater extends BaseCreater {
 		List<Field> fieldList = entity.getFields();
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("author", entity.getAuthor());
-		// Ê××ÖÄ¸Ğ¡Ğ´µÄÀàÃû
+		// é¦–å­—æ¯å°å†™çš„ç±»å
 		data.put("entityNameL", StringCaseUtil.lowcaseFirstChar(className));
-		// Ê××ÖÄ¸´óĞ´µÄÀàÃû
+		// é¦–å­—æ¯å¤§å†™çš„ç±»å
 		data.put("entityName", className);
 		data.put("package", getPackagePathWithPathKey().replaceAll("/", "."));
 
-		// ÊôĞÔÁĞ±í
+		// å±æ€§åˆ—è¡¨
 		List<Object> attrList = new ArrayList<Object>();
 		for (int i = 0; i < fieldList.size(); i++) {
 			Field field = fieldList.get(i);

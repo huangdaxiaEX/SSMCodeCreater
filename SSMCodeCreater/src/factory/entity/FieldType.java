@@ -1,7 +1,7 @@
 package factory.entity;
 
 /**
- * Êı¾İ¿â×Ö¶ÎÀàĞÍ×ª»¯Îªjava¶ÔÓ¦µÄÀàĞÍ
+ * æ•°æ®åº“å­—æ®µç±»å‹è½¬åŒ–ä¸ºjavaå¯¹åº”çš„ç±»å‹
  * 
  * @author huangkai
  * 
@@ -22,7 +22,7 @@ public class FieldType {
 	private static final String type_double		= Double.class.getSimpleName();
 	private static final String type_bigDecimal	= java.math.BigDecimal.class.getSimpleName();
 	
-	//SQL°ü
+	//SQLï¿½ï¿½
 	private static final String type_date		= java.sql.Date.class.getSimpleName();
 	private static final String type_time		= java.sql.Time.class.getSimpleName();
 	private static final String type_timestamp	= java.sql.Timestamp.class.getSimpleName();

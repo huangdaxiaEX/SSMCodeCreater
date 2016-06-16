@@ -18,7 +18,7 @@ import factory.parse.IParse;
 import factory.stringCaseUtil.StringCaseUtil;
 
 /**
- * ½âÎöexcel
+ * è§£æexcel
  * 
  * @author huangkai
  * 
@@ -44,20 +44,20 @@ public class ParseExcel implements IParse {
 		} else if (this.xssfWorkbook != null) {
 			return parseXlsx();
 		} else {
-			System.out.println("½âÎöÊ§°Ü");
+			System.out.println("è§£æå¤±è´¥");
 			return null;
 		}
 
 	}
 	
 	/**
-	 * ½âÎöxlsx¸ñÊ½µÄexcel
+	 * è§£æxlsxæ ¼å¼çš„excel
 	 * 
 	 * @return
 	 */
 	public List<Entity> parseXlsx() {
 		List<Entity> entityList = new ArrayList<Entity>();
-		// ¶ÁÈ¡ sheet
+		// è¯»å– sheet
 		for (int sheetCount = 0; sheetCount < xssfWorkbook.getNumberOfSheets(); sheetCount++) {
 			XSSFSheet xssfSheet = xssfWorkbook.getSheetAt(sheetCount);
 			if (xssfSheet == null) {
@@ -71,7 +71,7 @@ public class ParseExcel implements IParse {
 				if (xssfRow != null) {
 					int cellNumber = xssfRow.getRowNum();
 					switch (cellNumber) {
-					// ±íÃû
+					// è¡¨å
 					case 2:
 						entity.setEntityName(getValue(xssfRow.getCell(3)));
 						break;
@@ -141,13 +141,13 @@ public class ParseExcel implements IParse {
 	}
 
 	/**
-	 * ½âÎöxls¸ñÊ½µÄexcel
+	 * è§£æxlsæ ¼å¼çš„excel
 	 * 
 	 * @return
 	 */
 	public List<Entity> parseXls() {
 		List<Entity> entityList = new ArrayList<Entity>();
-		// ¶ÁÈ¡ sheet
+		// è¯»å– sheet
 		for (int sheetCount = 0; sheetCount < hssfWorkbook.getNumberOfSheets(); sheetCount++) {
 			HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(sheetCount);
 			if (hssfSheet == null) {
@@ -161,7 +161,7 @@ public class ParseExcel implements IParse {
 				if (hssfRow != null) {
 					int cellNumber = hssfRow.getRowNum();
 					switch (cellNumber) {
-					// ±íÃû
+					// è¡¨å
 					case 2:
 						entity.setEntityName(getValue(hssfRow.getCell(3)));
 						break;
@@ -231,7 +231,7 @@ public class ParseExcel implements IParse {
 	}
 
 	/**
-	 * »ñÈ¡xlsx¸ñÊ½µÄexcelµ¥ÔªÖµ
+	 * è·å–xlsxæ ¼å¼çš„excelå•å…ƒå€¼
 	 * 
 	 * @param xssfRow
 	 * @return
@@ -254,7 +254,7 @@ public class ParseExcel implements IParse {
 	}
 
 	/**
-	 * »ñÈ¡xls¸ñÊ½µÄexcelµ¥ÔªÖµ
+	 * è·å–xlsæ ¼å¼çš„excelå•å…ƒå€¼
 	 * 
 	 * @param hssfCell
 	 * @return
@@ -276,7 +276,7 @@ public class ParseExcel implements IParse {
 	}
 
 	/**
-	 * ¸¨Öú×ª»¯boolean
+	 * è¾…åŠ©è½¬åŒ–boolean
 	 * 
 	 * @param s
 	 * @return
@@ -286,7 +286,7 @@ public class ParseExcel implements IParse {
 	}
 
 	/**
-	 * ¸¨Öú×ª»¯int
+	 * è¾…åŠ©è½¬åŒ–int
 	 * 
 	 * @param s
 	 * @return

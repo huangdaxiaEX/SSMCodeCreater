@@ -12,7 +12,7 @@ import factory.pathSetting.PathSetting;
 import factory.stringCaseUtil.StringCaseUtil;
 
 /**
- * ÊµÌå¶ÔÏómapperXML
+ * å®ä½“å¯¹è±¡mapperXML
  * 
  * @author huangkai
  * 
@@ -37,16 +37,16 @@ public class MapperXMLCreater extends BaseCreater{
 	protected void fillData(String className, Entity entity){
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("author", entity.getAuthor());
-		// Ê××ÖÄ¸Ğ¡Ğ´µÄÀàÃû
+		// é¦–å­—æ¯å°å†™çš„ç±»å
 		data.put("classNameL", StringCaseUtil.lowcaseFirstChar(entity
 				.getEntityName()));
-		// È«²¿Ğ¡Ğ´µÄÀàÃû
+		// å…¨éƒ¨å°å†™çš„ç±»å
 		data.put("classNameLL", StringCaseUtil.lowcaseAll(entity
 						.getEntityName()));
 		data.put("dakuohao", "{");
 		data.put("dollor", "$");
 		data.put("jinhao", "#");
-		// Ê××ÖÄ¸´óĞ´µÄÀàÃû
+		// é¦–å­—æ¯å¤§å†™çš„ç±»å
 		data.put("className", StringCaseUtil.upcaseFirstChar(entity
 				.getEntityName()));
 		data.put("daoPackage", getPackagePathWithPathKey("dao").replaceAll("/", "."));

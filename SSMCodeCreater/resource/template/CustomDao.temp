@@ -1,13 +1,13 @@
 package ${package}${classNameL}Dao;
 
 /**
- * ×Ô¶¨ÒåDao
+ * è‡ªå®šä¹‰Dao
  * 
  * @author ${author}
  * 
  */
 public interface Custom${className}Dao {
 	
-	//×Ô¶¨Òådao·½·¨ ÔÚ MapperÀïÃæÊµÏÖ·½·¨ 
+	//è‡ªå®šä¹‰daoæ–¹æ³• åœ¨ Mapperé‡Œé¢å®ç°æ–¹æ³• 
 
 }

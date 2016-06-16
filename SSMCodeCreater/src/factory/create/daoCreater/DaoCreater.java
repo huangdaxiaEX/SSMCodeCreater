@@ -6,7 +6,7 @@ import factory.pathSetting.PathSetting;
 import factory.stringCaseUtil.StringCaseUtil;
 
 /**
- * DAO接口 生成
+ * DAO鎺ュ彛 鐢熸垚
  * 
  * @author huangkai
  * 

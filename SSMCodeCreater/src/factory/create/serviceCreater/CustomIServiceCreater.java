@@ -11,7 +11,7 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
 /**
- * 用户自定义Service接口 生成
+ * 鐢ㄦ埛鑷畾涔塖ervice鎺ュ彛 鐢熸垚
  * 
  * @author huangkai
  * 

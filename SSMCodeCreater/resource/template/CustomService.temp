@@ -5,7 +5,7 @@ import ${package}${classNameL}Service.${className}ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
- * 自定义实现Service
+ * 鑷畾涔夊疄鐜癝ervice
  * 
  * @author ${author}
  * 
@@ -13,6 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class Custom${className}ServiceImpl extends ${className}ServiceImpl implements ICustom${className}Service{
 	
-	//实现自定义Service方法
+	//瀹炵幇鑷畾涔塖ervice鏂规硶
 
 }

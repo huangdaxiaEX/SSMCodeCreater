@@ -11,7 +11,7 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
 /**
- * ÓÃ»§×Ô¶¨ÒåServiceÀà Éú³É
+ * ç”¨æˆ·è‡ªå®šä¹‰Serviceç±» ç”Ÿæˆ
  * 
  * @author huangkai
  * 

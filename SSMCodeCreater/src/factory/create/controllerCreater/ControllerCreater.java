@@ -6,7 +6,7 @@ import factory.pathSetting.PathSetting;
 import factory.stringCaseUtil.StringCaseUtil;
 
 /**
- * ControllerÀà Éú³É
+ * Controllerç±» ç”Ÿæˆ
  * 
  * @author huangkai
  * 
